@@ -3,6 +3,7 @@ package mv.atividade.client_finance_control.entities;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import mv.atividade.client_finance_control.TipoCliente;
 
 @Entity
 public class ClientePF extends Cliente {
@@ -14,6 +15,7 @@ public class ClientePF extends Cliente {
     }
 
     public ClientePF() {
+        this.setTipo(TipoCliente.PF);
     }
 
     public String getCpf() {

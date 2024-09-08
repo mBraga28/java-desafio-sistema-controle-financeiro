@@ -1,17 +1,22 @@
 package mv.atividade.client_finance_control.entities;
 
 import jakarta.persistence.*;
+import mv.atividade.client_finance_control.TipoCliente;
+
 import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Cliente {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String telefone;
+
+    @Enumerated(EnumType.STRING)
+    private TipoCliente tipo;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Conta> contas;
@@ -52,6 +57,14 @@ public abstract class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public TipoCliente getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoCliente tipo) {
+        this.tipo = tipo;
     }
 
     public List<Conta> getContas() {
