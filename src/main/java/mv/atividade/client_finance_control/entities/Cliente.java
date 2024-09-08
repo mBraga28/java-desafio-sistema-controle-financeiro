@@ -1,7 +1,7 @@
 package mv.atividade.client_finance_control.entities;
 
 import jakarta.persistence.*;
-import mv.atividade.client_finance_control.TipoCliente;
+import mv.atividade.client_finance_control.enums.TipoCliente;
 
 import java.util.List;
 

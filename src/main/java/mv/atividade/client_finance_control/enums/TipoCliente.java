@@ -1,4 +1,4 @@
-package mv.atividade.client_finance_control;
+package mv.atividade.client_finance_control.enums;
 
 public enum TipoCliente {
 

@@ -3,7 +3,7 @@ package mv.atividade.client_finance_control.entities;
 import java.util.List;
 
 import jakarta.persistence.Entity;
-import mv.atividade.client_finance_control.TipoCliente;
+import mv.atividade.client_finance_control.enums.TipoCliente;
 
 @Entity
 public class ClientePF extends Cliente {
