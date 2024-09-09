@@ -1,5 +1,7 @@
 package mv.atividade.client_finance_control.entities;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -10,13 +12,13 @@ public class Conta {
     private String numero;
     private String banco;
     private String agencia;
-    private Double saldo;
+    private BigDecimal saldo;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    public Conta(Long id, String numero, String banco, String agencia, Double saldo, Cliente cliente) {
+    public Conta(Long id, String numero, String banco, String agencia, BigDecimal saldo, Cliente cliente) {
         this.id = id;
         this.numero = numero;
         this.banco = banco;
@@ -57,11 +59,11 @@ public class Conta {
         this.agencia = agencia;
     }
 
-    public Double getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(Double saldo) {
+    public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
 

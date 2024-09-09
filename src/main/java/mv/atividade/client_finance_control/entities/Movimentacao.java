@@ -82,10 +82,6 @@ public class Movimentacao {
     public Conta getConta() {
         return conta;
     }
-
-    public void setConta(Conta conta) {
-        this.conta = conta;
-    }
     
     @Override
     public int hashCode() {
