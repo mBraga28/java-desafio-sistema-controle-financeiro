@@ -30,7 +30,7 @@ public class RelatorioService {
         return jdbcTemplate.queryForObject(sql, args, (rs, rowNum) -> rs.getBigDecimal("p_saldo_final"));
     }
 
- 
+    @SuppressWarnings("deprecation")
     public BigDecimal calcularSaldoCliente(Long idCliente, Date dataFinal) {
         String sql = "call calcular_saldo_cliente(:p_cliente_id, :p_data_final, :p_saldo_final)";
         Map<String, Object> params = new HashMap<>();
@@ -39,6 +39,6 @@ public class RelatorioService {
 
         Object[] args = new Object[]{params.get("p_cliente_id"), params.get("p_data_final")};
 
-        return jdbcTemplate.queryForList(sql, args, (rs, rowNum) -> rs.getBigDecimal("p_saldo_final"));
+        return jdbcTemplate.queryForObject(sql, args, (rs, rowNum) -> rs.getBigDecimal("p_saldo_final"));
     }
 }
