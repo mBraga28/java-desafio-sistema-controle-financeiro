@@ -47,6 +47,11 @@ public class Movimentacao {
         this.data = data;
     }
 
+    public Movimentacao(Conta conta, BigDecimal valor) {
+        this.conta = conta;
+        this.valor = valor;
+    }
+
     public Long getId() {
         return id;
     }

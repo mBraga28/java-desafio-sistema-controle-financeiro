@@ -16,6 +16,7 @@ public abstract class Cliente {
     private String nome;
     private String telefone;
 
+    @Column(columnDefinition = "DATE")
     private Date criadoEm;
 
     @Enumerated(EnumType.STRING)
