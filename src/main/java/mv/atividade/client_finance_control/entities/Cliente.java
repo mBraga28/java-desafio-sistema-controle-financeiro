@@ -3,6 +3,7 @@ package mv.atividade.client_finance_control.entities;
 import jakarta.persistence.*;
 import mv.atividade.client_finance_control.enums.TipoCliente;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -14,6 +15,8 @@ public abstract class Cliente {
     private Long id;
     private String nome;
     private String telefone;
+
+    private Date criadoEm;
 
     @Enumerated(EnumType.STRING)
     private TipoCliente tipo;
@@ -27,10 +30,11 @@ public abstract class Cliente {
     public Cliente() {
     }
 
-    public Cliente(Long id, String nome, String telefone, List<Conta> contas, List<Endereco> enderecos) {
+    public Cliente(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
+        this.criadoEm = criadoEm;
         this.contas = contas;
         this.enderecos = enderecos;
     }
@@ -57,6 +61,14 @@ public abstract class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public Date getCriadoEm() {
+        return criadoEm;
+    }
+
+    public void setCriadoEm(Date criadoEm) {
+        this.criadoEm = criadoEm;
     }
 
     public TipoCliente getTipo() {

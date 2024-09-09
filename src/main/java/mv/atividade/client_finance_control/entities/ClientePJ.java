@@ -1,5 +1,6 @@
 package mv.atividade.client_finance_control.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -10,9 +11,9 @@ public class ClientePJ extends Cliente {
     private String cnpj;
     private String razaoSocial;
 
-    public ClientePJ(Long id, String nome, String telefone, List<Conta> contas, List<Endereco> enderecos, String cnpj,
+    public ClientePJ(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos, String cnpj,
             String razaoSocial) {
-        super(id, nome, telefone, contas, enderecos);
+        super(id, nome, telefone, criadoEm, contas, enderecos);
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
     }

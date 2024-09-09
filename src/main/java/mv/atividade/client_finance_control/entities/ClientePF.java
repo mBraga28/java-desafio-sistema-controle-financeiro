@@ -1,5 +1,6 @@
 package mv.atividade.client_finance_control.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -9,8 +10,8 @@ import mv.atividade.client_finance_control.enums.TipoCliente;
 public class ClientePF extends Cliente {
     private String cpf;
 
-    public ClientePF(Long id, String nome, String telefone, List<Conta> contas, List<Endereco> enderecos, String cpf) {
-        super(id, nome, telefone, contas, enderecos);
+    public ClientePF(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos, String cpf) {
+        super(id, nome, telefone, criadoEm, contas, enderecos);
         this.cpf = cpf;
     }
 
