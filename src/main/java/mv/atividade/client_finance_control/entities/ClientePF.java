@@ -10,8 +10,8 @@ import mv.atividade.client_finance_control.enums.TipoCliente;
 public class ClientePF extends Cliente {
     private String cpf;
 
-    public ClientePF(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos, String cpf) {
-        super(id, nome, telefone, criadoEm, contas, enderecos);
+    public ClientePF(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, Endereco endereco, List<Movimentacao> movimentacoes, String cpf) {
+        super(id, nome, telefone, criadoEm, contas, endereco, movimentacoes);
         this.cpf = cpf;
     }
 

@@ -15,7 +15,6 @@ public class Endereco {
     private String uf;
     private String cep;
 
-    @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 

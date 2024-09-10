@@ -10,7 +10,7 @@ public class MovimentacaoDTO {
 
     private Long id;
 
-    private long contaId;
+    private Long contaId;
 
     private TipoMovimentacao tipo;
 
@@ -80,6 +80,5 @@ public class MovimentacaoDTO {
     public void setData(Date data) {
         this.data = data;
     }
-
     
 }

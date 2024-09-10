@@ -11,9 +11,9 @@ public class ClientePJ extends Cliente {
     private String cnpj;
     private String razaoSocial;
 
-    public ClientePJ(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos, String cnpj,
+    public ClientePJ(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, Endereco endereco, List<Movimentacao> movimentacoes, String cnpj,
             String razaoSocial) {
-        super(id, nome, telefone, criadoEm, contas, enderecos);
+        super(id, nome, telefone, criadoEm, contas, endereco, movimentacoes);
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
     }

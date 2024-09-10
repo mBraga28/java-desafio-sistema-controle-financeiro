@@ -5,14 +5,22 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-public class RelatorioSaldoClienteDTO {
 
+public class RelatorioSaldoClienteDTO {
+    
     private Long idCliente;
     private String nomeCliente;
+    private EnderecoDTO endereco;
+
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date dataCadastro;
+
+    private Integer movimentacoesCredito;
+    private Integer movimentacoesDebito;
+    private Integer totalMovimentacoes;
+    private BigDecimal valorPago;
     private BigDecimal saldoInicial;
-    private BigDecimal saldoFinal;
+    private BigDecimal saldoAtual;
 
     public Long getIdCliente() {
         return idCliente;
@@ -38,11 +46,42 @@ public class RelatorioSaldoClienteDTO {
     public void setSaldoInicial(BigDecimal saldoInicial) {
         this.saldoInicial = saldoInicial;
     }
-    public BigDecimal getSaldoFinal() {
-        return saldoFinal;
+   
+    public EnderecoDTO getEndereco() {
+        return endereco;
     }
-    public void setSaldoFinal(BigDecimal saldoFinal) {
-        this.saldoFinal = saldoFinal;
+    public void setEndereco(EnderecoDTO endereco) {
+        this.endereco = endereco;
+    }
+    public Integer getMovimentacoesCredito() {
+        return movimentacoesCredito;
+    }
+    public void setMovimentacoesCredito(Integer movimentacoesCredito) {
+        this.movimentacoesCredito = movimentacoesCredito;
+    }
+    public Integer getMovimentacoesDebito() {
+        return movimentacoesDebito;
+    }
+    public void setMovimentacoesDebito(Integer movimentacoesDebito) {
+        this.movimentacoesDebito = movimentacoesDebito;
+    }
+    public Integer getTotalMovimentacoes() {
+        return totalMovimentacoes;
+    }
+    public void setTotalMovimentacoes(Integer totalMovimentacoes) {
+        this.totalMovimentacoes = totalMovimentacoes;
+    }
+    public BigDecimal getValorPago() {
+        return valorPago;
+    }
+    public void setValorPago(BigDecimal valorPago) {
+        this.valorPago = valorPago;
+    }
+    public BigDecimal getSaldoAtual() {
+        return saldoAtual;
+    }
+    public void setSaldoAtual(BigDecimal saldoAtual) {
+        this.saldoAtual = saldoAtual;
     }
 
     

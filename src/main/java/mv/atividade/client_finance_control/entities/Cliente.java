@@ -25,19 +25,23 @@ public abstract class Cliente {
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Conta> contas;
 
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
+
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Endereco> enderecos;
+    private List<Movimentacao> movimentacoes;
 
     public Cliente() {
     }
 
-    public Cliente(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, List<Endereco> enderecos) {
+    public Cliente(Long id, String nome, String telefone, Date criadoEm, List<Conta> contas, Endereco endereco, List<Movimentacao> movimentacoes) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.criadoEm = criadoEm;
         this.contas = contas;
-        this.enderecos = enderecos;
+        this.endereco = endereco;
+        this.movimentacoes = movimentacoes;
     }
 
     public Long getId() {
@@ -84,8 +88,16 @@ public abstract class Cliente {
         return contas;
     }
 
-    public List<Endereco> getEnderecos() {
-        return enderecos;
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public List<Movimentacao> getMovimentacoes() {
+        return movimentacoes;
     }
     
 }
