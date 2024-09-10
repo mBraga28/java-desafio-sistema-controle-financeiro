@@ -3,6 +3,7 @@ package mv.atividade.client_finance_control.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_endereco")
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

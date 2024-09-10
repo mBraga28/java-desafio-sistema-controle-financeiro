@@ -4,9 +4,11 @@ import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import mv.atividade.client_finance_control.enums.TipoCliente;
 
 @Entity
+@Table(name = "tb_pesssao_fisica")
 public class ClientePF extends Cliente {
     private String cpf;
 

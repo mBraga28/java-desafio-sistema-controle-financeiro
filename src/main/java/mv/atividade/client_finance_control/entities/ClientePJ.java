@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import mv.atividade.client_finance_control.enums.TipoCliente;
 
 @Entity
+@Table(name = "tb_pessoa_juridica")
 public class ClientePJ extends Cliente {
     private String cnpj;
     private String razaoSocial;
