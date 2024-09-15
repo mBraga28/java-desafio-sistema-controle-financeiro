@@ -1,10 +1,6 @@
-## Criando um README.md Completo para seu Projeto Spring Boot com Oracle
 
-**Excelente!** Um bom README.md é essencial para qualquer projeto, especialmente quando se trabalha em equipe ou quando você precisa voltar ao projeto depois de um tempo. Vamos criar um README.md detalhado que cubra os pontos que você mencionou e guie outros desenvolvedores na utilização do seu projeto.
 
-### Estrutura Sugerida para o README.md
 
-```markdown
 # Projeto Spring Boot com Oracle - Controle Financeiro
 
 ## Visão Geral
@@ -20,7 +16,6 @@ Este projeto tem como objetivo desenvolver uma aplicação Spring Boot que geren
 * Maven ou Gradle
 * Oracle Database
 * IDE (Eclipse, IntelliJ, etc.)
-* **[Outras ferramentas ou bibliotecas utilizadas]**
 
 ## Instalação
 1. **Clone o repositório:**
@@ -57,4 +52,3 @@ Contribuições são bem-vindas! Para contribuir, por favor, siga estes passos:
 
 ## Agradecimentos
 * **[Listagem de ferramentas, bibliotecas ou pessoas que contribuíram]**
-
